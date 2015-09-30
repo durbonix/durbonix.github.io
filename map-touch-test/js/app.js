@@ -28,12 +28,15 @@ function initMap() {
                 title: 'hello'
             });
         });
+        
+        Three Chopt, VA
+        37.630458, -77.547904
 
     }*/
-    console.log("added in listener")
+    console.log("added in listener");
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+        center: {lat: 37.630458, lng: -77.547904},
+        zoom: 3
       });
       google.maps.event.addListener(map, "click", function(e) {
 
