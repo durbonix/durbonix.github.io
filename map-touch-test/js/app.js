@@ -1,4 +1,4 @@
-function initialize(){
+function initMap(){
     // if HTML DOM Element that contains the map is found...
 alert("ehll");
 if (document.getElementById('map-canvas')){
