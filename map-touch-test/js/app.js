@@ -30,9 +30,22 @@ function initMap() {
         });
 
     }*/
+    console.log("added in listener")
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 8
+      });
+      google.maps.event.addListener(map, "click", function(e) {
+
+          //lat and lng is available in e object
+          var latLng = e.latLng;
+          var position = new google.maps.LatLng(e.latLng.lat(), e.latLng.lng());
+
+          var marker = new google.maps.Marker({
+              position: position,
+              map: map,
+              title: 'hello'
+          });
       });
     
 }
