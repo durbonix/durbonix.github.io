@@ -34,15 +34,15 @@ function initMap() {
         title: 'hello'
     }, {
         position: {
-            lat: 40.714236,
-            lng: -73.961453
+            lat: 40.714256,
+            lng: -73.961482
         },
         map: map,
         title: 'hello'
     }, {
         position: {
-            lat: 40.714246,
-            lng: -73.961455
+            lat: 40.714286,
+            lng: -73.961502
         },
         map: map,
         title: 'hello'
