@@ -16,7 +16,6 @@ function initMap() {
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
     }*/
-    console.log("added in listener");
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 37.630458, lng: -77.547904},
         zoom: 3
