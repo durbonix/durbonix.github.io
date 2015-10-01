@@ -17,9 +17,10 @@ function initMap() {
 
     }*/
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 37.630458, lng: -77.547904},
-        zoom: 3
+        center: {lat: 40.714226, lng: -73.961452},
+        zoom: 18
       });
+      
       google.maps.event.addListener(map, "click", function(e) {
 
           //lat and lng is available in e object
