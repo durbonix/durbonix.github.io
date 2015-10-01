@@ -1,5 +1,5 @@
 function initMap() {
-    /*
+/*
     // if HTML DOM Element that contains the map is found...
     if (document.getElementById('map-canvas')) {
         // Coordinates to center the map
@@ -18,21 +18,52 @@ function initMap() {
     }*/
     var map = new google.maps.Map(document.getElementById('map'), {
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: {lat: 40.714226, lng: -73.961452},
-        zoom: 18
-      });
-      
-      google.maps.event.addListener(map, "click", function(e) {
+        center: {
+            lat: 40.714226,
+            lng: -73.961452
+        },
+        zoom: 22
+    });
 
-          //lat and lng is available in e object
-          var latLng = e.latLng;
-          var position = new google.maps.LatLng(e.latLng.lat(), e.latLng.lng());
-
-          var marker = new google.maps.Marker({
-              position: position,
-              map: map,
-              title: 'hello'
-          });
-      });
+    var markers = [{
+        position: {
+            lat: 40.714226,
+            lng: -73.961452
+        },
+        map: map,
+        title: 'hello'
+    }, {
+        position: {
+            lat: 40.714228,
+            lng: -73.961453
+        },
+        map: map,
+        title: 'hello'
+    }, {
+        position: {
+            lat: 40.714230,
+            lng: -73.961455
+        },
+        map: map,
+        title: 'hello'
+    }];
     
+    for (var i=0; i<markers.length;i++){
+        var marker = new google.maps.Marker(markers[i]);
+    }
+
+
+    google.maps.event.addListener(map, "click", function(e) {
+
+        //lat and lng is available in e object
+        var latLng = e.latLng;
+        var position = new google.maps.LatLng(e.latLng.lat(), e.latLng.lng());
+
+        var marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: 'hello'
+        });
+    });
+
 }
